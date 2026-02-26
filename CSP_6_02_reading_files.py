@@ -10,7 +10,7 @@ def toString(fileName):
     return out
 
 #print(toString("ExampleText.txt")=="Here is the text\ni am another line")
-print(toString("ExampleText.txt"))
+#print(toString("ExampleText.txt"))
 
 def longestLine(fileName):
     f = open(fileName)
@@ -32,10 +32,12 @@ def toBinary(fileName):
 
     for line in f:
         line = line.strip()
-        for b in range(0, int(len(line/8)):
+
+        for b in range(0, int(len(line)/8)):
             bytes.append(line[b*8: (b+1)*8])
 
         if len(line) - (b+1)*8 > 0:
             bytes.append(line[(b+1)*8 : len(line) ])
+
 
     return bytes
